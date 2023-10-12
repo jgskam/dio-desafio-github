@@ -1,0 +1,112 @@
+Instalacao
+# add-apt-repository ppa:git-core/ppa 
+# apt update 
+# apt install git
+
+Configuracao
+$ git config --global user.name <"nome do usuario no github">
+$ git config --global user.email <"email do github>
+$ git config --global init.defaultBranch main
+apos criar o token
+$ git config --global credential.helper store
+ver arquivo onde esta o token
+$ git config --global --show-origin credential.helper
+
+explica tb usando ssh mais complexo e ja configurei
+
+Comandos 
+clone
+    $ git clone https://github.com/jgskam/dio-bootcampgamesjs.git
+    - se colocar o nome depois do comando ele cria uma pasta com o nome digitado
+
+clone branch especifica
+    $ git clone https://github.com/jgskam/dio-bootcampgamesjs.git --branch teste --single-branch
+    - clona uma branch especifica do repositorio
+
+git init
+    faz com que a pasta seja git
+
+git remote
+    link a pasta ao repositorio remoto
+    $ git remote add origin https://github.com/jgskam/dio-bootcampgamesjs.git
+
+git status
+    mostra as alteracoes atuais na pasta
+
+git log
+    mostra alteracoes na pasta
+
+git restore <nome do arquivo>
+    restaura arquivo da ultima alteracao realizada.
+
+git commit --amend -m""
+    alterar mensagem do ultimo commit
+
+git reset --soft <hash do commit pego pelo git log>
+    retorna a um commit anterior deixando os arquivos para git add
+
+git reset --mixed <hash do commit pego pelo git log>
+    retorna a um commit anterior deixando os arquivos pronto pra git commit
+
+git reset --hard <hash do commit pego pelo git log>
+    retorna a um commit anterior e apaga os arquivos dos outros commits
+
+git reset <caminho e nome do arquivo
+    exclui um arquivo questa no commit
+
+git restore --staged <caminho e nome do arquivo
+    exclui um arquivo questa no commit
+
+git reflog
+    mostra todas as alteracoes dos commits
+
+git add .
+    adiciona todos os arquivos pra futuro commit
+
+git checkout -b teste
+    cria uma branch
+
+git checkout main
+    sem o -b vai pra branch desejada
+
+git branch 
+    mostra branchs como uma lista
+
+git branch -v
+    mostra o ultimo commit de cada branch
+
+git merge teste
+    mescla a branch desejada com a branch main
+
+git branch -d teste
+    apaga a branch que desejarmos
+
+git pull origin main
+    puxa as alteracoes do github para a maquina local
+
+git fetch origin main
+    puxa as alteracoes mas nao mescla com o arquivo local
+
+git diff main origin/main
+    mostra as diferencas entre local e origin/main
+
+git merge origin/main
+    mescla as diferencas apos o diff
+    
+git stash
+    arquiva uma modificacao pra que uma modificacao nao va pra proxima branch criada
+
+git stash list
+    mostra stash como uma lista
+
+git stash pop
+    remove ultima alteracao da lista de stash
+
+git stash apply
+    aplica a alteracao da lista
+
+remover git de pasta
+    excluir a pasta .git ou pelo explorer ou pelo terminal
+
+Adicionar pasta ao gitignore
+echo pasta/ > .gitignore
