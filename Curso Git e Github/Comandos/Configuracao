@@ -1,0 +1,11 @@
+Configuracao
+$ git config --global user.name <"nome do usuario no github">
+$ git config --global user.email <"email do github>
+$ git config --global init.defaultBranch main
+apos criar o token
+$ git config --global credential.helper store
+ver arquivo onde esta o token
+$ git config --global --show-origin credential.helper
+
+explica tb usando ssh mais complexo e ja configurei
+

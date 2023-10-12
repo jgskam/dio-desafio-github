@@ -1,19 +1,3 @@
-Instalacao
-# add-apt-repository ppa:git-core/ppa 
-# apt update 
-# apt install git
-
-Configuracao
-$ git config --global user.name <"nome do usuario no github">
-$ git config --global user.email <"email do github>
-$ git config --global init.defaultBranch main
-apos criar o token
-$ git config --global credential.helper store
-ver arquivo onde esta o token
-$ git config --global --show-origin credential.helper
-
-explica tb usando ssh mais complexo e ja configurei
-
 Comandos 
 clone
     $ git clone https://github.com/jgskam/dio-bootcampgamesjs.git
